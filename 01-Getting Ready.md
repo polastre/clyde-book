@@ -2,7 +2,7 @@
 
 By now you've received your Clyde and you've played with its basic functionality.
 
-Here's how you get started programming it.
+Here's how you get started programming it.  If you want to play by the rules, you can can follow [the official Fabule instructions](https://fabule.com/clyde/getting-started-software) instead.
 
 ## Preparing your computer
 
