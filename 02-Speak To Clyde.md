@@ -2,7 +2,7 @@
 
 Now that you've uploaded the `ClydeOriginal` application, let's speak to Clyde.
 
-Clyde can be controlled using the USB port (a virtual serial port).
+Clyde can be controlled using the USB port (a virtual serial port).  This section will familiarize yourself with Clyde's basic functions, such as the ambient eye light and the lamp.
 
 ## Get Started
 
@@ -30,6 +30,12 @@ Where **1** is your version number.
 Send `SET_WHITE 50` to Clyde.  He'll respond with `OK`.
 
 The number after `SET_WHITE` can be any number from 0 to 255, where 0 is off and 255 is the brighest.  Ow, 255 will hurt your eyes!
+
+## Change the ambient eye color
+
+SEND `SET_AMBIENT 100 150 200` to Clyde.  He'll respond with `OK`.
+
+The number after `SET_AMBIENT` is an RGB deciminal color value (they must be integers!). Thus we just set the color to `RGB(100,150,200)`.
 
 ## Troubleshooting
 
