@@ -10,7 +10,8 @@ Here's how you get started programming it.
 1. [Download Clyde libraries as a zip file](https://github.com/fabule/Clyde/archive/master.zip).
 1. Open the zip file.
 1. Copy all of the folders in `software/arduino/libraries` to your `arduino/libraries` directory (usually in your home directory on your PC).  If the `arduino/libraries` folder doesn't exist, create it.  You'll need to copy **Clyde**, **SerialCommand**, and **MPR121**.
-1. Copy `software/arduino/libraries/SerialCommand` to your `arduino/libraries`.
+1. [Download kroimon's SerialCommand](https://github.com/kroimon/Arduino-SerialCommand/archive/master.zip).
+1. Delete the existing `arduino/libraries/SerialCommand` and replace it with the unzipped folder from kroimon's SerialCommand.
 1. Copy `software/arduino/hardware/1.0.5` to your `ardunio/hardware` directory.
 1. Open up the Arduino application.
 1. Under `Tools > Board`, select **Clyde**.
