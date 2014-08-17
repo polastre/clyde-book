@@ -6,9 +6,22 @@ Clyde can be controlled using the USB port (a virtual serial port).  This sectio
 
 ## Get Started
 
-Start communicating with 2 easy steps.
+Communicating with Clyde requires your first line of code.
 
-1. Open up the Serial Monitor.  This is in `Tools > Serial Monitor` or you can press SHIFT-COMMAND-M on Mac.
+1. In your `ClydeOriginal` application, find the line that starts with: `Serial.begin(9600);`
+
+1. After this line, on a new line, enter:
+
+  ```C
+  while (!Serial) ;
+  ```
+
+1. Save your modified `ClydeOriginal` application.  Arduino will ask you to enter a new name for this application. Call it something catchy.
+
+1. To send this new code to Clyde, click the **Upload** button.
+
+1. After the upload has completed, open up the Serial Monitor.  This is in `Tools > Serial Monitor` or you can press SHIFT-COMMAND-M on Mac.
+
 1. Next to **9600 Baud**, change the dropdown from **No line ending** to **Both NL & CR**.
 
 ## Version
@@ -39,8 +52,12 @@ The number after `SET_AMBIENT` is an RGB deciminal color value (they must be int
 
 ## Troubleshooting
 
-If Clyde is not talking to you reliably over the serial port, make sure that `ClydeOriginal` is correctly configured to wait for the serial port to start up.  The line after `Serial.begin(9600)` should say:
-```
+If Clyde is not talking to you reliably over the serial port, make sure that `ClydeOriginal` is correctly configured to wait for the serial port to start up.  The line after `Serial.begin(9600);` should say:
+
+```C
 while (!Serial) ;
 ```
+
 If it doesn't, add that line into your sketch, and re-upload the application.
+
+**Note:** If you include `while (!Serial) ;` in your application, Clyde will not start doing anything until you open the Serial Monitor.  Be sure to remove this line when you want to remove Clyde from your PC and use him just with the power adapter.
